@@ -5,18 +5,17 @@ import { AppComponent } from './app.component';
 import { SquareComponent } from './square/square.component';
 import { HolderComponent } from './holder/holder.component';
 import { ResultComponent } from './result/result.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     SquareComponent,
     HolderComponent,
-    ResultComponent
+    ResultComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

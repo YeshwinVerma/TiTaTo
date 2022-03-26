@@ -1,2 +1,10 @@
 <app-result [winner]="winner"></app-result>
 <app-holder [turn]="currentMovePlayerName" [values]="board" (changeBoard)="board=$event;" (changeTurn)="currentMovePlayerName=$event;aiMove();" [currentMovePlayerName]="currentMovePlayerName"></app-holder>
+FirstMove:
+<select [(ngModel)]="currentPlayerWrapper" (ngModelChange)="onFirstMoveSlected()">
+    <!-- <option value="none" [disabled]="!isBoardEmpty()">None</option> -->
+    <option value="player" [disabled]="!isBoardEmpty()">PLAYER</option>
+    <option value="ai" [disabled]="!isBoardEmpty()">AI</option>
+</select>
+<br>
+<button (click)="emptyBoard();" [disabled]="isBoardEmpty()">Restart</button>
