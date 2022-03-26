@@ -1,0 +1,2 @@
+<app-result [winner]="winner"></app-result>
+<app-holder [turn]="currentMovePlayerName" [values]="board" (changeBoard)="board=$event;" (changeTurn)="currentMovePlayerName=$event;aiMove();" [currentMovePlayerName]="currentMovePlayerName"></app-holder>

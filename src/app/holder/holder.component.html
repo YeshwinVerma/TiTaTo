@@ -1,0 +1,5 @@
+<div class="grid">
+    <div *ngFor="let value of values; let i = index">
+        <app-square [value]="value" [id]="i" (changeValue)="changeValue($event)"></app-square>
+    </div>
+</div>
